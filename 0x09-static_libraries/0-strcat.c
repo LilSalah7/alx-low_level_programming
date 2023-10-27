@@ -1,21 +1,10 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
-/**
-  * _strlen_recursion - main function
-  *
-  * @s: Function parameter
-  *
-  * Return: Length
-  */
-int _strlen_recursion(char *s)
+char *_strcat(char *dest, char *src)
 {
-	int lnt = 0;
-
-	if (*s)
-	{
-	lnt++;
-	lnt += _strlen_recursion(s + 1);
-	}
-	return (lnt);
+    return strcat(dest, src);
 }
-

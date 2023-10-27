@@ -1,1 +1,1 @@
-resd
+read
