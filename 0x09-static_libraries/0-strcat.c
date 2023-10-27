@@ -1,31 +1,21 @@
 #include "main.h"
- /**
- * _strcat - concatenates two strings
- * @dest: input value
- * @src: input value
- *
- * Return: void	
- */
-char *_strcat(char *dest, char *src)
+
+/**
+  * _strlen_recursion - main function
+  *
+  * @s: Function parameter
+  *
+  * Return: Length
+  */
+int _strlen_recursion(char *s)
 {
-	int i;
-	int j;
+	int lnt = 0;
 
-
-	i = 0;
-	while (dest[i] != '\0')
+	if (*s)
 	{
-		i++;
+	lnt++;
+	lnt += _strlen_recursion(s + 1);
 	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}		
-
-
-	dest[i] = '\0';
-	return (dest);
+	return (lnt);
 }
+
